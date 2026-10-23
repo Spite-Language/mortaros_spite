@@ -15,6 +15,13 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D826 to D833 (memory worker):** calling `drop()` by name is an error; a `map_` two members could answer is an
+  error naming both; the removed flags are refused only when `Build` has no such field; any `this` not read through
+  keeps a class out of a `Vector` (so `Date`, `Duration` and `Time` too); a lent item's function is checked after
+  every function is built, and library functions are never lent one except a list's own listing calls and a variadic
+  parameter; the written-form check skips private attributes; no chosen value for unsigned numbers in the
+  default-answer message; a temporary read for one attribute is let go after the call that reads it, not at the end
+  of the statement yet.
 - **D846 to D851 (foreign worker):** `File.lock()` answers a `LockedFile`, since `File.Lock` cannot be a folder beside
   `file.spite`; `Color(text)` is Color's one constructor, with `hexadecimal`, `read(text): Boolean` and
   `text.to_color(): Color?`, and text naming no colour prints and exits 1 until a crash line shows text; a header's
