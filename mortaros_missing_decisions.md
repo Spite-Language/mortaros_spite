@@ -15,6 +15,12 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D846 to D851 (foreign worker):** `File.lock()` answers a `LockedFile`, since `File.Lock` cannot be a folder beside
+  `file.spite`; `Color(text)` is Color's one constructor, with `hexadecimal`, `read(text): Boolean` and
+  `text.to_color(): Color?`, and text naming no colour prints and exits 1 until a crash line shows text; a header's
+  prototype casts each foreign argument to its C type's number; the functions of a `DynamicLibrary` attribute are
+  looked up when it is set; a JSON number with a fraction reads into a whole number as its whole part; `==` across
+  two classes is the mismatch error.
 - **D810 to D815, D798's templates as built:** an attribute template's class is the class its body reads the
   parameter on (parameters first; several classes narrow to their common attributes; no read takes the first
   class parameter); a function template's hole is any part of a name, with `p.name` the function and `p.hole` the
