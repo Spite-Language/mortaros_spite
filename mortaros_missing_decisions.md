@@ -404,3 +404,16 @@ Decided by an agent under D509 (anything that can be changed later). Each is bui
 - **D578, which files count as "scripting".** The shell scripts, the git hooks (git runs them as shell, so they must
   stay shell or call a Spite program) and `bin/spite.cmd`: do the hooks stay as one-line shell files that run a
   Spite program, or is the rule only about the repository's own tools?
+
+- **D809, which bare numbers to refuse (the magic-number rule, suspended).** Mortaro: "a lot of misterious numbers
+  happening around that i dont know where they come from". Suggestions, narrowest first:
+  1. A literal equal to a standard constant (`3.14159...`, `6.28318...`, `2.71828...`, `9.81`, a type's largest or
+     smallest value) is refused, naming the constant to write (`Float.pi`, `Integer.largest`).
+  2. A number that appears more than once with the same meaning in one class (the same literal compared, assigned
+     or passed in two places) is refused, naming a constant to declare once.
+  3. A number in a condition or a loop bound other than 0, 1, -1 and 2 is refused unless it is a named attribute or
+     constant; arithmetic factors (`* 2`, `/ 100`) stay allowed.
+  4. `--optimization-report` (or a separate report) lists every bare number with its place, so they can be read
+     without refusing anything.
+  Which of these, if any, and whether it is an error or a fix (D800)?
+
