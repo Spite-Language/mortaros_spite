@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D961 to D965 (optC worker):** a singleton the entry class makes is not tested again where the defaults cannot be running (D961); loads that never change move out of loops and survive writes (D962); a store stands for the load that reads it back (D963); unreachable blocks lead nowhere for the passes and the register allocator (D964); a counted loop may call lock-free singletons, and an atomic singleton such a loop holds takes its lock instead (D965).
 - **D928, D929 (selfhost worker):** the bootstrap seed is commit `47767ec` and `scripts/bootstrap.sh` builds the compiler from the old one to a fixed point; after the switch the compiler is built only by a self-built compiler, and a new one is kept only when it passes the suite and rebuilds itself byte for byte.
 - **D957 to D959 (optB worker):** a proven list item passed as a call's receiver is not counted when the call cannot write that list class's items (D957); a call in a loop tests its callee's early return in place (D958); functions and loop heads are 16-byte aligned (D959).
 - **D926, D927 (selfhost worker):** every build writes `<executable>.functions` (each function's start and end), and a native fault in the program's code names its function and callers from it (`spite.function`, `spite.caller`); the seed for the bootstrap is now the `selfhost_fix` branch, and the compiler it writes rebuilds itself to the same bytes.
