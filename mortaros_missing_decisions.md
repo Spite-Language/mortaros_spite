@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D816 to D825, the reflection, walk and class errors of the meta round:** the template-walk texts (D816); an enum symbol error lists the values (D817); the 'generics' line shows its own value (D818); the name-prefix rule skips a program's root folder (D819); operator functions by name stay allowed on numbers, `Vector` and `Items` until you pick between `tests/numbers`, `tests/vector_append_copies` and `conformance/functions_direct_sum` (D820); a class test against a non-member is an error (D821); `Enum.values[n]` is `Enum?` (D822); `.is_stateful` counts a held singleton with attributes and `Spite.Class.instances` is in dotted-name order (D823); `type` and `singleton` are names (D824); `namespace` is `Spite.Namespace?` and the round's texts (D825).
 - **D826 to D833 (memory worker):** calling `drop()` by name is an error; a `map_` two members could answer is an
   error naming both; the removed flags are refused only when `Build` has no such field; any `this` not read through
   keeps a class out of a `Vector` (so `Date`, `Duration` and `Time` too); a lent item's function is checked after
