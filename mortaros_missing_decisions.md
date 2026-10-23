@@ -15,6 +15,12 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D810 to D815, D798's templates as built:** an attribute template's class is the class its body reads the
+  parameter on (parameters first; several classes narrow to their common attributes; no read takes the first
+  class parameter); a function template's hole is any part of a name, with `p.name` the function and `p.hole` the
+  text; `Spite.Argument` is a range type too, its function the call its plural fills; `Namespace.classes.each` and
+  `Enum.values.each` unroll while compiling; and `Spite.Attribute`/`Spite.Function` make no template yet. Say if a
+  body that reads nothing should be an error instead of taking its first class parameter.
 - **D625's details:** a link joined by `or` counts once toward the three `if`s the switch rule needs (so two `if`s
   of three values each are left alone), and each value becomes its own case. Should the count be the values
   instead of the `if`s?
