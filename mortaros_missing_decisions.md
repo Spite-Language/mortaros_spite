@@ -15,6 +15,12 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1601 (allrest worker):** a reload that changes how many same-attribute object literals a function writes is refused.
+- **D1602 (allrest worker):** inside its class, a bare name reads and writes through the class's getter and setter; calling them by bare name is refused.
+- **D1603 (allrest worker):** a plural template's word the program's `String` dropped from its tables is inflected by its ending.
+- **D1604 (allrest worker):** a write inside a last `if` or `switch` branch, never read after, is a lost write.
+- **D1605 (allrest worker):** an internal class named as a union member, a `type` member's type or a call's text is refused.
+- **D1606 (allrest worker):** `--final-classes` leaves out the classes the compiler writes for itself.
 - **D1574 (allopt2 worker):** a call through a function value in `Parallel` work reaches only taken functions of its shape, so fewer singletons lock.
 - **D1515 (allproofs worker):** `absolute()` gives a range, and counters stepped down keep a floor and count passes.
 - **D1573 (allopt2 worker):** an unread object whose attributes are written is still never made; its writes are left out.
@@ -455,7 +461,9 @@ Decided by an agent under D509 (anything that can be changed later). Each is bui
   one value per case (one way, nothing new to learn); (b) a case lists several values, `"byte", "tiny": return 1`,
   which reads like the `or` it replaces but is a second shape of case. Recommendation: (b), since the rule now pushes
   every such `or` into a switch and (a) makes that switch longer than the `if`s were. Blocks only the message text
-  of D625, which writes the cases out.
+  of D625, which writes the cases out. D244: a union switch whose members share a body must write `_:` today
+  (two equal bodies are refused), so a member added to the union later takes that body with nothing to say so;
+  (b) would let the switch name `Circle, Square:` and stay exhaustive.
 - **A test runner written in Spite, and an `Executable` class (Mortaro: "this needs bigger discussion", 2026-10-16).**
   Wanted: run a program by path from Spite (`Executable("conformance1.exe").execute("argues")`, shaped like
   `DynamicLibrary`), so the tests are a Spite program that loads the compiler and runs the conformance programs, and
