@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1541 (allopt1 worker):** the last low pass folds functions whose instructions are the same into one; two function values of folded functions then compare equal.
 - **D1571 (allopt2 worker):** a division and a remainder of the same two numbers in one block are moved beside each other so they are one `div`.
 - **D1511 (allproofs worker):** interactive builds (`--repl`, `--repl-port`, `--hot-reload`) prove ranges and drop the checks they prove, like every build.
 - **D1485 (devtools3 worker):** `locals` at a breakpoint answers a line per local, `name: Type = value`, written by the compiler before the stop, not a `Spite.Attribute` per local; no path at the prompt starts at a local yet.
