@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1571 (allopt2 worker):** a division and a remainder of the same two numbers in one block are moved beside each other so they are one `div`.
 - **D1511 (allproofs worker):** interactive builds (`--repl`, `--repl-port`, `--hot-reload`) prove ranges and drop the checks they prove, like every build.
 - **D1485 (devtools3 worker):** `locals` at a breakpoint answers a line per local, `name: Type = value`, written by the compiler before the stop, not a `Spite.Attribute` per local; no path at the prompt starts at a local yet.
 - **D1481 to D1484 (devtools2 worker):** `eval` and `run` answer in any `--hot-reload` REPL build, local too, and the typed code is a function of its own class where `program` names the entry instance, so a bare `player.health` is not Spite there (D1481); the typed code's class is digested like a program file (D1482); a breakpoint is two statements the parser writes before its line's statement, calling a machinery singleton that holds the REPL's stop as a function value, with the answers `repl.md` gives (D1483); `--reload-at` honours a `build.spite`'s `hot_reload` (D1484).
