@@ -21,7 +21,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - **D1602 (allrest worker):** inside its class, a bare name reads and writes through the class's getter and setter; calling them by bare name is refused.
 - **D1603 (allrest worker):** a plural template's word the program's `String` dropped from its tables is inflected by its ending.
 - **D1604 (allrest worker):** a write inside a last `if` or `switch` branch, never read after, is a lost write.
-- **D1605 (allrest worker):** an internal class named as a union member, a `type` member's type or a call's text is refused.
+- **D1605 (allrest worker):** an internal class named as a union member or a `type` member's type is refused; a text naming it stays text.
 - **D1606 (allrest worker):** `--final-classes` leaves out the classes the compiler writes for itself.
 - **D1574 (allopt2 worker):** a call through a function value in `Parallel` work reaches only taken functions of its shape, so fewer singletons lock.
 - **D1515 (allproofs worker):** `absolute()` gives a range, and counters stepped down keep a floor and count passes.
