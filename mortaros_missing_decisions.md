@@ -24,6 +24,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - **D1605 (allrest worker):** an internal class named as a union member or a `type` member's type is refused; a text naming it stays text.
 - **D1606 (allrest worker):** `--final-classes` leaves out the classes the compiler writes for itself.
 - **D1641 (alltools worker):** the `--repl-port` socket thread only watches the socket (machine code, `WSAPoll`) and wakes the program; `Program.sleep` answers commands while it sleeps.
+- **D1642 (alltools worker):** a second thread reaching a breakpoint waits its turn; a save found while stopped is reloaded at the next command; a `switch` case can hold a breakpoint.
 - **D1574 (allopt2 worker):** a call through a function value in `Parallel` work reaches only taken functions of its shape, so fewer singletons lock.
 - **D1515 (allproofs worker):** `absolute()` gives a range, and counters stepped down keep a floor and count passes.
 - **D1573 (allopt2 worker):** an unread object whose attributes are written is still never made; its writes are left out.
