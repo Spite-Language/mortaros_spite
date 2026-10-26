@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1511 (allproofs worker):** interactive builds (`--repl`, `--repl-port`, `--hot-reload`) prove ranges and drop the checks they prove, like every build.
 - **D1485 (devtools3 worker):** `locals` at a breakpoint answers a line per local, `name: Type = value`, written by the compiler before the stop, not a `Spite.Attribute` per local; no path at the prompt starts at a local yet.
 - **D1481 to D1484 (devtools2 worker):** `eval` and `run` answer in any `--hot-reload` REPL build, local too, and the typed code is a function of its own class where `program` names the entry instance, so a bare `player.health` is not Spite there (D1481); the typed code's class is digested like a program file (D1482); a breakpoint is two statements the parser writes before its line's statement, calling a machinery singleton that holds the REPL's stop as a function value, with the answers `repl.md` gives (D1483); `--reload-at` honours a `build.spite`'s `hot_reload` (D1484).
 - **D1496 to D1499 (faults2 worker):** an object literal's class is keyed by its class, function, layout and place among that function's literals of the same layout, so a reload keeps its id (D1496); each reload library carries its own place record, chained from the executable's place table, so a fault in reloaded code names its place (D1497); the push onto the list let go at exit is a compare-exchange (D1498); the work the right side of `and`/`or` needs runs only when the left side does not decide (D1499).
