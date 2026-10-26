@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1574 (allopt2 worker):** a call through a function value in `Parallel` work reaches only taken functions of its shape, so fewer singletons lock.
 - **D1515 (allproofs worker):** `absolute()` gives a range, and counters stepped down keep a floor and count passes.
 - **D1573 (allopt2 worker):** an unread object whose attributes are written is still never made; its writes are left out.
 - **D1514 (allproofs worker):** an attribute tested not zero proves its division until any call, attribute write or next loop pass.
