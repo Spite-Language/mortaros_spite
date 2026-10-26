@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1572 (allopt2 worker):** a remainder by a constant beside its division is computed back from the quotient.
 - **D1512, D1513 (allproofs worker):** a lent parameter passed on where it cannot be lent is refused inside the callee, as at the first lend (D1512); `x and false` and `x or true` fold even when `x` calls something, the call run once before the statement (D1513).
 - **D1541 (allopt1 worker):** the last low pass folds functions whose instructions are the same into one; two function values of folded functions then compare equal.
 - **D1571 (allopt2 worker):** a division and a remainder of the same two numbers in one block are moved beside each other so they are one `div`.
