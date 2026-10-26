@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1662 (alllanguage worker):** two packages pinning different commits of one repository are refused until versions are two libraries; `Process.with_errors` added to the library.
 - **D1661 (alllanguage worker):** a run-time `Spite.Call` with an argument the function lacks names that argument (the first in fill order).
 - **D1576 (allopt2 worker):** common subexpressions across blocks over registers written several times (a loop counter), forgotten where they are written.
 - **D1575 (allopt2 worker):** the body a rotated loop test jumps back to is aligned to 16 bytes (to be timed).
