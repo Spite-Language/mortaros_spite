@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1664 (alllanguage worker):** a Build default naming another field folds to that field's constant.
 - **D1663 (alllanguage worker):** back references are linked through calls up to three deep.
 - **D1662 (alllanguage worker):** two packages pinning different commits of one repository are refused until versions are two libraries; `Process.with_errors` added to the library.
 - **D1661 (alllanguage worker):** a run-time `Spite.Call` with an argument the function lacks names that argument (the first in fill order).
