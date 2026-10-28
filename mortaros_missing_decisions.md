@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 
+- **D1724 (program_start worker):** `Arguments` folds into `Program` as `arguments()`, `argument_named(name): String?` and `has_flag(name): Boolean`, each answering only its own form (a bare `--name` is `null` to `argument_named`); the `arguments.player_name` member reading is gone.
 - **D1665 (alllanguage worker):** `7.to_part()` for an enum from its number; the library's `DynamicLibrary.Naming` and `ForeignCallback.ContextPlace` enums; reflection names typed `String`.
 - **D1664 (alllanguage worker):** a Build default naming another field folds to that field's constant.
 - **D1663 (alllanguage worker):** back references are linked through calls up to three deep.
@@ -533,3 +534,12 @@ Decided by an agent under D509 (anything that can be changed later). Each is bui
   4. `--optimization-report` (or a separate report) lists every bare number with its place, so they can be read
      without refusing anything.
   Which of these, if any, and whether it is an error or a fix (D800)?
+- **Does `Environment` still halt on a malformed setting after D1721?** (raised by D1724). D1721 says the library
+  never halts on what the outside world does, but `spite_spec/specs/programs.md` still has `Environment` crash when
+  a program run directly is given a value that is not of the setting's type (`--workers=many`, a bare `--name` for
+  a `String`), since a setting is read in the constructor the compiler fills and the program has no answer to
+  test. Options: (a) keep the crash: the person started the program wrong and nothing sensible follows (today's
+  rule, now also what a bare `--name` for a `String` does); (b) stop with a message naming the setting and the
+  form it takes, exit 1, like the snake-case refusal does; (c) keep the default and say so on the error stream.
+  Recommendation: (b), a prose stop is what the snake-case case already does and it names the cause to the person
+  who typed it. Blocks nothing; D1724 kept (a).
