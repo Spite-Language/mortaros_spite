@@ -534,3 +534,8 @@ Decided by an agent under D509 (anything that can be changed later). Each is bui
      without refusing anything.
   Which of these, if any, and whether it is an error or a fix (D800)?
 
+- **D1718, a literal proven to convert where a plain `T` is wanted** (spite_compiler#229). A cast answers what
+  `to_<type>()` answers, so `"127.0.0.1"` cast to an `IpAddress` is an `IpAddress?`. When the compiler has worked
+  out while compiling that a literal converts, its `T?` is proven present: should such a literal then go where a
+  plain `T` is wanted (`client.connect("127.0.0.1", 8080)` with an `IpAddress` parameter needing no narrowing), as
+  any proven `T?` does after a `crash`, or should the caller still narrow it?
