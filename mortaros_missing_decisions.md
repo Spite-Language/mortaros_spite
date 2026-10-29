@@ -18,14 +18,6 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
 
-- **D824:** `type` and `singleton` are ordinary names wherever a name is written (`describe(type: String)`,
-  `var singleton = 1`), since those keywords only start a declaration at the top of a file. Keep, or reserve them?
-- **D1268:** a decimal literal may carry an exponent (`2.5e3`, `1e-5`, `4E+2`). Keep the form, or drop it (D1780
-  already names most such numbers)?
-- **D1602:** inside its own class, a bare name no local or attribute holds reads through the class's `get_<name>()`
-  and writes through `set_<name>(value)`, as `point.height` does from outside. Keep?
-- **D598's limits:** a chain through a `T?` counts as missing only inside `==` and `!=`; `<`, `<=`, `>`, `>=` and a
-  bare `made.kind` still need narrowing. Keep, or widen?
 - **D567:** a reopening of a library class may not add a hand copy of one of its operators (`Matrix4.set_product`
   beside `*`). Should the rule also reach copies of plain library functions?
 - **D810 to D814 (templates over attributes and functions):** a template body that reads no parameter takes the
