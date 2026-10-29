@@ -18,12 +18,6 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
 
-- **D567:** a reopening of a library class may not add a hand copy of one of its operators (`Matrix4.set_product`
-  beside `*`). Should the rule also reach copies of plain library functions?
-- **D810 to D814 (templates over attributes and functions):** a template body that reads no parameter takes the
-  first class parameter. Keep, or make it an error?
-- **D510, item 300:** `Fraction<$number_type>` names a number's fractional class in a signature (`Float` up to 32
-  bits, `Double` for `Long`). Nothing uses it yet. Keep, or drop it?
 - **D1198:** `JsonReader` and `BinaryFormat` make the object they fill from its attribute defaults, without running
   a constructor that takes arguments. Keep, or require a constructor that takes none (D1776)?
 - **D850:** a JSON number with a fraction or an exponent read into a whole number is its whole part (`3.7` is `3`).
