@@ -18,17 +18,6 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
 
-- **D1198:** `JsonReader` and `BinaryFormat` make the object they fill from its attribute defaults, without running
-  a constructor that takes arguments. Keep, or require a constructor that takes none (D1776)?
-- **D850:** a JSON number with a fraction or an exponent read into a whole number is its whole part (`3.7` is `3`).
-  Keep, or make the read fail (`null`) under D244?
-- **D532, D541 (dictionary keys):** an object key is keyed by identity, and a class declaring `equals` is refused as
-  a key until keying by `equals` is built; `0.0` and `-0.0` are one key, as is every `not_a_number`; an untyped
-  literal is keyed `String` or `Integer` by its first key, and a key is cast to the key type (a number given to a
-  `Dictionary<String, V>` becomes its text); nullables, unions, shapes and function values cannot be keys; JSON
-  writes only `String`, whole-number and enum keys. Confirm, or name the rule to change.
-- **D1126, D1128, D1196 (load paths):** an absolute `load` is refused, naming the relative path to write, and every
-  program loads the standard library by its relative path (`load "../spite_standard_library/windows"`). Keep?
 
 ## Open
 
