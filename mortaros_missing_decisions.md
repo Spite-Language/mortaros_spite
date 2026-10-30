@@ -18,6 +18,8 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
 
+- D1789: a program's own file wins over every pinned commit of a repository, and the wording of two commits that disagree (spite_compiler#253).
+- D1790: the bootstrap's stepping stones bridged inside `scripts/bootstrap.sh` (spite_compiler#267).
 
 ## Open
 
