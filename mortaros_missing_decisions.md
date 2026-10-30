@@ -27,6 +27,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1799: `Test(namespace).run()` runs each test in a run of its own named by `SPITE_TEST`, walks nested namespaces, and its report's words (spite_standard_library#35).
 - D1800: the benchmark runner's named settings, the endless-loop rule judging only locals, and refusing `$T.attributes` read as a list on a type (spite_benchmarks#1, spite_compiler#260, #273).
 - D1801: an enum reflects through `Spite.Enum` and `Spite.EnumValue` (an enum named as a value and `value.class` answer it, `Part.values` stays the typed list), a symbol key such as `attributes['to']` is refused for text (D1798 superseded there), and the class declaring an enum may add conversions for it (spite_compiler#42).
+- D1802: a class's `.enums`, `.unions` and `.types` as name-keyed dictionaries, a union's `.members` keyed by each member's name with namespaces, and `Spite.Type` answering only its names and owner (spite_compiler#237).
 
 ## Open
 
