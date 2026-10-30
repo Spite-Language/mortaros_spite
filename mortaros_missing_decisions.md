@@ -23,6 +23,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1795: every conversion called by name is refused (D1730's broad form), and the wording of the two errors (spite_compiler#234).
 - D1796: a serializer's keys map that is mixed, changed, held or passed is read as the program runs instead of refused, and the serializers' walks are built last (spite_compiler#263).
 - D1797: a walk over a type's attributes is refused until reflection lists a type's members, and an error in a function names it (spite_compiler#271, #272).
+- D1798: reflection's dictionaries: an object's keys and every `.functions` key unchecked (null when missing), a declaration still indexing an instance's attributes, and a bound attribute's `.owner` being the object (spite_compiler#254, #255).
 
 ## Open
 
