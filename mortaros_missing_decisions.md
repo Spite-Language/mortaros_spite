@@ -29,6 +29,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1801: an enum reflects through `Spite.Enum` and `Spite.EnumValue` (an enum named as a value and `value.class` answer it, `Part.values` stays the typed list), a symbol key such as `attributes['to']` is refused for text (D1798 superseded there), and the class declaring an enum may add conversions for it (spite_compiler#42).
 - D1802: a class's `.enums`, `.unions` and `.types` as name-keyed dictionaries, a union's `.members` keyed by each member's name with namespaces, and `Spite.Type` answering only its names and owner (spite_compiler#237).
 - D1803: a crash line names its site as `, site <id>` after the function, the map places each part as `name:Type@line:column`, and a `fallback` of several `and` parts is a site per part (spite_compiler#251, #250, #248).
+- D1804: how `Number` goes: the forms typed "any number" are removed with their programs, the library's types are named `Component`, `Element` and `Part`, a whole number no longer fits `Matrix4` or `Quaternion`, and `Float` and `Double` gain `remainder` (spite_compiler#238).
 
 ## Open
 
