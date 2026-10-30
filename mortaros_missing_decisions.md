@@ -20,6 +20,9 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 
 - D1789: a program's own file wins over every pinned commit of a repository, and the wording of two commits that disagree (spite_compiler#253).
 - D1790: the bootstrap's stepping stones bridged inside `scripts/bootstrap.sh` (spite_compiler#267).
+- D1795: every conversion called by name is refused (D1730's broad form), and the wording of the two errors (spite_compiler#234).
+- D1796: a serializer's keys map that is mixed, changed, held or passed is read as the program runs instead of refused, and the serializers' walks are built last (spite_compiler#263).
+- D1797: a walk over a type's attributes is refused until reflection lists a type's members, and an error in a function names it (spite_compiler#271, #272).
 
 ## Open
 
