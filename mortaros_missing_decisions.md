@@ -31,6 +31,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1803: a crash line names its site as `, site <id>` after the function, the map places each part as `name:Type@line:column`, and a `fallback` of several `and` parts is a site per part (spite_compiler#251, #250, #248).
 - D1804: how `Number` goes: the forms typed "any number" are removed with their programs, the library's types are named `Component`, `Element` and `Part`, a whole number no longer fits `Matrix4` or `Quaternion`, and `Float` and `Double` gain `remainder` (spite_compiler#238).
 - D1805: a class's functions as `Spite.FunctionDeclaration` with no `call_function()`, a bound function's `.owner` carried only when asked, and a class known at run time running a function through `Spite.Call` on an instance it makes, whose constructor runs (spite_compiler#275).
+- D1806: a walk of `Namespace.classes` or `Enum.values` unrolls with a walker of another object, its copies made in that object's class and called on it, the object read once (spite_compiler#23).
 
 ## Open
 
