@@ -52,6 +52,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1820: a program given any argument makes `Environment()` before its entry is made, so a flag it does not declare is refused even where nothing else makes it; `.env` fills the program's own `Build` fields after the variable, but not the compiler's own settings (spite_compiler#256).
 - D1830: the first two fixes of D1767 (declaration order, the guard `if`), the `fixed:` line, and which mistakes stay errors (spite_compiler#25).
 - D1831: a template whose only parameter is its word's, named as a value outside a known walk (each over a run-time list of declarations), is a plain function of that parameter (spite_compiler#290).
+- D1832: `{}` where a `Dictionary<Key, Value>` is declared is that empty dictionary; elsewhere it stays an empty object (spite_compiler#291).
 
 ## Open
 
