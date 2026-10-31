@@ -14,7 +14,7 @@ D370, 76 by D371, 235 by D372, 161 by D373 and 105 by
 D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by D383, 257 by D382, 258 by D384, 261 by D385, 253 by D386, 255 by D387, 259 by D388, 260 by D389, 262 by D390, 251 by D391, 263 by D394 (2026-10-02); 266 to 296 by D468 to D488, and 268, 269, 271 and 276 to 279 by D493 to D497, 298 by D498, 301 by D499, 291 by D500, 299 by D501 (2026-10-03); 275 by D503, 302 by D504, 304 by D505 (2026-10-04); 280, 281, 284, 297, 300 and 303 by D510, decided by Claude under D509 and listed under To confirm (2026-10-07); the rest of To confirm triaged by D1781 (2026-10-29). Earlier answers are listed in each row of `design/decisions.md`.
 
 ## To confirm
-- D1812: the built program's Build values come from the environment and .env, not from flags the compiler does not declare.
+- D1813: a program's Build flags are given on the compiler's command line beside the compiler's Environment settings, validated against the program's declared Build attributes (replaces D1812's last sentence).
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
