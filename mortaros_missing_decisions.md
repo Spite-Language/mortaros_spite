@@ -40,6 +40,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1815: the compiler reads the program's Build flags through a private `_flags` of its own `Environment`; a word by position is refused by every program; `spite` runs the program with no flags; an enum setting (spite_compiler#256).
 - D1816: `Parallel(...)` and `Concurrent(...)` are an error naming the compiler; programs whose output came from handles are retired, and a server and client in one program run in order, leaving `Http.Client` and `WebSocket.Client` against a same-program server untested until #219 (spite_compiler#224, #239).
 - D1817: a `Process`'s `keeps_errors_apart` with `read_errors_as_string()`, its `time_limit` with `run()` answering `null` and `was_stopped`, and its Windows output kept as the bytes written (`\r\n` included) (spite_standard_library#38).
+- D1818: back references followed through calls to a fixed point, with keys at most four parts deep, at most 64 rounds, and an object of a recursive reading dropped (spite_compiler#26).
 
 ## Open
 
