@@ -34,6 +34,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1806: a walk of `Namespace.classes` or `Enum.values` unrolls with a walker of another object, its copies made in that object's class and called on it, the object read once (spite_compiler#23).
 - D1807: the first esoteric-number rules (a decimal agreeing with a decimal preset, whole numbers of three or more digits that are no power of ten or two, preset bodies exempt), and named numbers folded while building in the library (spite_compiler#262).
 - D1808: what the x64 targets share (small blocks stay per target), the calling convention as a table, D651 superseded, and where the emitter's refusals went (spite_compiler#209, #16, #6).
+- D1809: how a number class states its width in `_set_this` and how the compiler reads it, `Boolean` told apart by declaring no `sum`, and a program without the library holding no numbers (spite_compiler#252).
 
 ## Open
 
