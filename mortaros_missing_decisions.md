@@ -39,6 +39,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1814: a preset as an attribute default, a cast as the target's `set_this` check, `set_this` and `get_this` refused by name in programs and the library calling accessors by name, and a buffer started smaller only where its room is proven unused (spite_compiler#280, #281, #283).
 - D1815: the compiler reads the program's Build flags through a private `_flags` of its own `Environment`; a word by position is refused by every program; `spite` runs the program with no flags; an enum setting (spite_compiler#256).
 - D1816: `Parallel(...)` and `Concurrent(...)` are an error naming the compiler; programs whose output came from handles are retired, and a server and client in one program run in order, leaving `Http.Client` and `WebSocket.Client` against a same-program server untested until #219 (spite_compiler#224, #239).
+- D1817: a `Process`'s `keeps_errors_apart` with `read_errors_as_string()`, its `time_limit` with `run()` answering `null` and `was_stopped`, and its Windows output kept as the bytes written (`\r\n` included) (spite_standard_library#38).
 
 ## Open
 
