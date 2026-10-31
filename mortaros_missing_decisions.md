@@ -36,6 +36,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1807: the first esoteric-number rules (a decimal agreeing with a decimal preset, whole numbers of three or more digits that are no power of ten or two, preset bodies exempt), and named numbers folded while building in the library (spite_compiler#262).
 - D1808: what the x64 targets share (small blocks stay per target), the calling convention as a table, D651 superseded, and where the emitter's refusals went (spite_compiler#209, #16, #6).
 - D1809: how a number class states its width in `_set_this` and how the compiler reads it, `Boolean` told apart by declaring no `sum`, and a program without the library holding no numbers (spite_compiler#252).
+- D1814: a preset as an attribute default, a cast as the target's `set_this` check, `set_this` and `get_this` refused by name in programs and the library calling accessors by name, and a buffer started smaller only where its room is proven unused (spite_compiler#280, #281, #283).
 - D1811: `Environment().unread_settings()` lists the command line values no setting read, which the compiler reads in place of `Program.arguments()`, and `spite --connect=<port>` (spite_compiler#256).
 
 ## Open
