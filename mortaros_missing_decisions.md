@@ -53,6 +53,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1830: the first two fixes of D1767 (declaration order, the guard `if`), the `fixed:` line, and which mistakes stay errors (spite_compiler#25).
 - D1831: a template whose only parameter is its word's, named as a value outside a known walk (each over a run-time list of declarations), is a plain function of that parameter (spite_compiler#290).
 - D1832: `{}` where a `Dictionary<Key, Value>` is declared is that empty dictionary; elsewhere it stays an empty object (spite_compiler#291).
+- D1833: a fix found while or after the program is built (a dead `crash` or `fallback` line, an unread local whose value does nothing) writes the file and runs the compile again, instead of dropping the check from the built program (spite_compiler#25).
 
 ## Open
 
