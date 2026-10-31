@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 - D1813: a program's Build flags are given on the compiler's command line beside the compiler's Environment settings, validated against the program's declared Build attributes (replaces D1812's last sentence).
+- D1819: an attribute a loop keeps in a register is stored before and loaded after a call on a cold path of the loop (a block not run on every pass and in no inner loop), so such a call no longer keeps it in memory.
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
