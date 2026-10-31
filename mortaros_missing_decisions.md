@@ -20,7 +20,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - D1827: a function's and an attribute's declaration answer `.source_file`, a `File`; the name, and that a class keeps only `.source_files` (spite_compiler#285).
 - D1828: a bound attribute's `.declaration` is the class's own declaration object; a walk copy reads its declaration's `.reads`, `.writes` and the rest; walks over a class's `.enums`, `.unions`, `.types` and a union's `.members` unroll; an enum walker must take the enum (spite_compiler#277, #279).
 - D1821: the low representation in SSA form only inside the cleaning's first three passes, joins lowered at once to edge copies and the versions coalesced again, so the allocator never reads a join (spite_compiler#11's steps 2 to 4 replaced).
-- D1822, D1823, D1824: a result written in several places joining its dying left operand; a decimal never in a whole-number register and decimal constants from data; data loads relative to the instruction and unchanging singleton reads read again instead of spilled (spite_compiler#145, #143, #150).
+- D1823, D1824: a decimal never in a whole-number register and decimal constants from data; data loads relative to the instruction and unchanging singleton reads read again instead of spilled (spite_compiler#143, #150; D1822 for #145 was withdrawn).
 - D1825: a comparison made in a block that dominates a branch decides it from a dominating test (spite_compiler#147).
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
