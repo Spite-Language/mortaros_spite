@@ -50,6 +50,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1817: a `Process`'s `keeps_errors_apart` with `read_errors_as_string()`, its `time_limit` with `run()` answering `null` and `was_stopped`, and its Windows output kept as the bytes written (`\r\n` included) (spite_standard_library#38).
 - D1818: back references followed through calls to a fixed point, with keys at most four parts deep, at most 64 rounds, and an object of a recursive reading dropped (spite_compiler#26).
 - D1820: a program given any argument makes `Environment()` before its entry is made, so a flag it does not declare is refused even where nothing else makes it; `.env` fills the program's own `Build` fields after the variable, but not the compiler's own settings (spite_compiler#256).
+- D1830: the first two fixes of D1767 (declaration order, the guard `if`), the `fixed:` line, and which mistakes stay errors (spite_compiler#25).
 
 ## Open
 
