@@ -16,6 +16,9 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 ## To confirm
 - D1813: a program's Build flags are given on the compiler's command line beside the compiler's Environment settings, validated against the program's declared Build attributes (replaces D1812's last sentence).
 - D1819: an attribute a loop keeps in a register is stored before and loaded after a call on a cold path of the loop (a block not run on every pass and in no inner loop), so such a call no longer keeps it in memory.
+- D1821: the low representation in SSA form only inside the cleaning's first three passes, joins lowered at once to edge copies and the versions coalesced again, so the allocator never reads a join (spite_compiler#11's steps 2 to 4 replaced).
+- D1822, D1823, D1824: a result written in several places joining its dying left operand; a decimal never in a whole-number register and decimal constants from data; data loads relative to the instruction and unchanging singleton reads read again instead of spilled (spite_compiler#145, #143, #150).
+- D1825: a comparison made in a block that dominates a branch decides it from a dominating test (spite_compiler#147).
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
