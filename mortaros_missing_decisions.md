@@ -51,6 +51,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1818: back references followed through calls to a fixed point, with keys at most four parts deep, at most 64 rounds, and an object of a recursive reading dropped (spite_compiler#26).
 - D1820: a program given any argument makes `Environment()` before its entry is made, so a flag it does not declare is refused even where nothing else makes it; `.env` fills the program's own `Build` fields after the variable, but not the compiler's own settings (spite_compiler#256).
 - D1830: the first two fixes of D1767 (declaration order, the guard `if`), the `fixed:` line, and which mistakes stay errors (spite_compiler#25).
+- D1831: a template whose only parameter is its word's, named as a value outside a known walk (each over a run-time list of declarations), is a plain function of that parameter (spite_compiler#290).
 
 ## Open
 
