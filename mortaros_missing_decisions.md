@@ -38,6 +38,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1809: how a number class states its width in `_set_this` and how the compiler reads it, `Boolean` told apart by declaring no `sum`, and a program without the library holding no numbers (spite_compiler#252).
 - D1814: a preset as an attribute default, a cast as the target's `set_this` check, `set_this` and `get_this` refused by name in programs and the library calling accessors by name, and a buffer started smaller only where its room is proven unused (spite_compiler#280, #281, #283).
 - D1811: `Environment().unread_settings()` lists the command line values no setting read, which the compiler reads in place of `Program.arguments()`, and `spite --connect=<port>` (spite_compiler#256).
+- D1816: `Parallel(...)` and `Concurrent(...)` are an error naming the compiler; programs whose output came from handles are retired, and a server and client in one program run in order, leaving `Http.Client` and `WebSocket.Client` against a same-program server untested until #219 (spite_compiler#224, #239).
 
 ## Open
 
