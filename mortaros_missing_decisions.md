@@ -23,6 +23,8 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - D1821: the low representation in SSA form only inside the cleaning's first three passes, joins lowered at once to edge copies and the versions coalesced again, so the allocator never reads a join (spite_compiler#11's steps 2 to 4 replaced).
 - D1823, D1824: a decimal never in a whole-number register and decimal constants from data; data loads relative to the instruction and unchanging singleton reads read again instead of spilled (spite_compiler#143, #150; D1822 for #145 was withdrawn).
 - D1825: a comparison made in a block that dominates a branch decides it from a dominating test (spite_compiler#147).
+- D1834, D1835: a copy's two sides one register while they hold one value (only copies of computed numbers), join copies before the branch's comparison, and the allocator's operand hint per write (spite_compiler#145).
+- D1836, D1837: decimal comparisons decided by dominating tests (only `==`/`!=` opposite) and decimal operations on constants folded in the cleaning (spite_compiler#147, #143).
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
