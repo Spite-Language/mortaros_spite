@@ -25,6 +25,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - D1825: a comparison made in a block that dominates a branch decides it from a dominating test (spite_compiler#147).
 - D1834, D1835: a copy's two sides one register while they hold one value (only copies of computed numbers), join copies before the branch's comparison, and the allocator's operand hint per write (spite_compiler#145).
 - D1836, D1837: decimal comparisons decided by dominating tests (only `==`/`!=` opposite) and decimal operations on constants folded in the cleaning (spite_compiler#147, #143).
+- D1838: how a buffer, a list and a text grow is written by the compiler with the old policy (twice, or what is wanted, a list at least four), at the write that needs it, and a byte loop is one forwards copy; the library names no room (spite_compiler#239, D1735).
 
 Triaged by D1781 (2026-10-29): every other agent decision listed here was superseded by a later decision or settled
 as the compiler's own under D509 and D1758. What is left changes what a program can write or what it means.
