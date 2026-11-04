@@ -58,6 +58,8 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1831: a template whose only parameter is its word's, named as a value outside a known walk (each over a run-time list of declarations), is a plain function of that parameter (spite_compiler#290).
 - D1832: `{}` where a `Dictionary<Key, Value>` is declared is that empty dictionary; elsewhere it stays an empty object (spite_compiler#291).
 - D1833: a fix found while or after the program is built (a dead `crash` or `fallback` line, an unread local whose value does nothing) writes the file and runs the compile again, instead of dropping the check from the built program (spite_compiler#25).
+- D1843: a file is printed only from its tree by printers/spite, which also breaks lines over 120 columns and does the other tree layout rules; every repository reprinted (spite_compiler#25).
+- D1844: a comment above a function is that function's, the top of a file is the class's heading, and one anywhere else between declarations is moved to the heading with a `fixed:` line (spite_compiler#25).
 
 ## Open
 
