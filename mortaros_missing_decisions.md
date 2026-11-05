@@ -68,6 +68,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1847: a mistake with one fix is fixed by a fix rule in `fixes/<layer>/` that changes the tree, called just before that layer's validators, which then see only what stays an error (spite_compiler#25).
 - D1848: `Fixes.Fixes` is the one writer; the fixes found after building are written together and restart the compile once, capped at 8 restarts by `SPITE_FIX_RESTARTS` (spite_compiler#25).
 - D1857: an `if` or `while` decided while compiling is fixed in the file unless moving the body would change what a name means, and an empty `else` is not printed (spite_compiler#25).
+- D1858: a generic class is named with its codegen values wherever a class name is read, dotted names included (`Game.Crate<Float>`, a new form), and arguments on a plain class, an enum, a namespace, a number class or `Spite.Class` are refused (spite_compiler#313).
 
 ## Open
 
