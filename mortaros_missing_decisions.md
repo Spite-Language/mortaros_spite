@@ -67,6 +67,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1844: a comment above a function is that function's, the top of a file is the class's heading, and one anywhere else between declarations is moved to the heading with a `fixed:` line (spite_compiler#25).
 - D1847: a mistake with one fix is fixed by a fix rule in `fixes/<layer>/` that changes the tree, called just before that layer's validators, which then see only what stays an error (spite_compiler#25).
 - D1848: `Fixes.Fixes` is the one writer; the fixes found after building are written together and restart the compile once, capped at 8 restarts by `SPITE_FIX_RESTARTS` (spite_compiler#25).
+- D1857: an `if` or `while` decided while compiling is fixed in the file unless moving the body would change what a name means, and an empty `else` is not printed (spite_compiler#25).
 
 ## Open
 
