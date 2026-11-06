@@ -172,3 +172,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - **A literal's conversion, D1888 to D1890 (spite_compiler#229, to confirm).** The evaluator is a proof over the high
   representation and leaves `"localhost"` and an `Instant` naming a zone as run-time `T?`; a literal that does not
   convert is an error in a branch not taken too; a local holding a literal does not count. Recommendation: keep all three.
+- D1902: the home of `Anything` and `Nothing`, numbers in `Anything`, no `switch` on it, and `null` costing no object (spite_compiler#364).
