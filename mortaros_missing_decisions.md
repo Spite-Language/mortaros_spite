@@ -80,6 +80,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1868: an entry class with a `generic` line is an error naming the first line and the fix, since a generic class has no one object and the entry class is the one that runs (spite_compiler#324).
 - D1870: a `--repl-port` build's REPL drops a connection it cannot write to (closes it, forgets it, waits for the next) and never crashes the program (spite_compiler#327).
 - D1876: `Phase<Integer>` as a declared type is refused in #313's words for an enum, a union, a `type`, and also a number class, which the issue did not name (spite_compiler#319).
+- D1877: an earlier attribute of a narrowed path undoes the proof whatever is written, and a new local stops being fresh once stored, copied, passed, returned, taken with a function or called on; calling a method that keeps nothing also counts, the one known over-refusal (spite_compiler#322).
 
 ## Open
 
