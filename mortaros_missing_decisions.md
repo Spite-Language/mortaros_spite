@@ -165,3 +165,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
   form it takes, exit 1, like the snake-case refusal does; (c) keep the default and say so on the error stream.
   Recommendation: (b), a prose stop is what the snake-case case already does and it names the cause to the person
   who typed it. Blocks nothing; D1724 kept (a).
+- D1880: a `preload` no `Volume` reads is a compile error, like anything unread (spite_compiler#337).
