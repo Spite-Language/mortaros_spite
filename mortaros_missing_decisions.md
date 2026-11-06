@@ -174,3 +174,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
   convert is an error in a branch not taken too; a local holding a literal does not count. Recommendation: keep all three.
 - D1902: the home of `Anything` and `Nothing`, numbers in `Anything`, no `switch` on it, and `null` costing no object (spite_compiler#364).
 - D1905: a default only left-out defaults read is not made; a shape member name or an inspectable build keeps it (spite_compiler#301).
+- **Narrowing and leaving, D1906 and D1907 (spite_compiler#323, #330, to confirm).** A call in a condition now counts against a narrowing by the order the sides run, which refuses programs that were accepted (silently wrong); a write in a block that always leaves no longer undoes a proof past that block. Recommendation: keep both.
