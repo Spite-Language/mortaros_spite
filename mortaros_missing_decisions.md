@@ -161,4 +161,3 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
   form it takes, exit 1, like the snake-case refusal does; (c) keep the default and say so on the error stream.
   Recommendation: (b), a prose stop is what the snake-case case already does and it names the cause to the person
   who typed it. Blocks nothing; D1724 kept (a).
-- D1872: where the implicit standard library comes from with no flag: virtual files inside the compiler's own exe (proposed), or an installation folder (spite_compiler#333).
