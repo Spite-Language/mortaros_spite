@@ -81,6 +81,8 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1870: a `--repl-port` build's REPL drops a connection it cannot write to (closes it, forgets it, waits for the next) and never crashes the program (spite_compiler#327).
 - D1876: `Phase<Integer>` as a declared type is refused in #313's words for an enum, a union, a `type`, and also a number class, which the issue did not name (spite_compiler#319).
 - D1877: an earlier attribute of a narrowed path undoes the proof whatever is written, and a new local stops being fresh once stored, copied, passed, returned, taken with a function or called on; calling a method that keeps nothing also counts, the one known over-refusal (spite_compiler#322).
+- D1878: a check after a write or call that undoes the proof stays and narrows again; a repeat still goes; a class test after such a write stays refused, with `fallback` on the value first as the way out (spite_compiler#329).
+- D1879: a write or call in a block that always leaves does not reach reads after it; a write to the same path is still forgotten past it (spite_compiler#330).
 
 ## Open
 
