@@ -169,3 +169,6 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
   Recommendation: (b), a prose stop is what the snake-case case already does and it names the cause to the person
   who typed it. Blocks nothing; D1724 kept (a).
 - D1880: a `preload` no `Volume` reads is a compile error, like anything unread (spite_compiler#337).
+- **A literal's conversion, D1888 to D1890 (spite_compiler#229, to confirm).** The evaluator is a proof over the high
+  representation and leaves `"localhost"` and an `Instant` naming a zone as run-time `T?`; a literal that does not
+  convert is an error in a branch not taken too; a local holding a literal does not count. Recommendation: keep all three.
