@@ -70,6 +70,12 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1857: an `if` or `while` decided while compiling is fixed in the file unless moving the body would change what a name means, and an empty `else` is not printed (spite_compiler#25).
 - D1858: a generic class is named with its codegen values wherever a class name is read, dotted names included (`Game.Crate<Float>`, a new form), and arguments on a plain class, an enum, a namespace, a number class or `Spite.Class` are refused (spite_compiler#313).
 - D1861: a default a constructor always replaces is not built when building it could not be seen; a singleton it would have used first keeps that first use, in order, and no object is made (spite_compiler#321).
+- D1862: the rest of the dead checks as blocks are fixed; a nested class test and a `while` on a proven value stay errors (spite_compiler#25).
+- D1863: an `else if` guard is hoisted only for one number parameter against numbers that cannot both hold (spite_compiler#25).
+- D1864: an unread attribute or local goes with its writes when they all do nothing; a write alone in its block or through another object stays the error (spite_compiler#25).
+- D1865: a `load` in the entry class of a folder no class outside it names is removed, never the library's or a pinned package's (spite_compiler#25).
+- D1866: local and parameter renames, and the split of abbreviations into one expansion and several, with its list of words (spite_compiler#25).
+- D1867: a keyword one letter off is corrected in a tokens layer, only where nothing else could be written (spite_compiler#25).
 
 ## Open
 
