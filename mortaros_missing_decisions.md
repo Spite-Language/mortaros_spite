@@ -76,6 +76,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1865: a `load` in the entry class of a folder no class outside it names is removed, never the library's or a pinned package's (spite_compiler#25).
 - D1866: local and parameter renames, and the split of abbreviations into one expansion and several, with its list of words (spite_compiler#25).
 - D1867: a keyword one letter off is corrected in a tokens layer, only where nothing else could be written (spite_compiler#25).
+- D1868: an entry class with a `generic` line is an error naming the first line and the fix, since a generic class has no one object and the entry class is the one that runs (spite_compiler#324).
 
 ## Open
 
