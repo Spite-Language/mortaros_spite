@@ -78,6 +78,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1866: local and parameter renames, and the split of abbreviations into one expansion and several, with its list of words (spite_compiler#25).
 - D1867: a keyword one letter off is corrected in a tokens layer, only where nothing else could be written (spite_compiler#25).
 - D1868: an entry class with a `generic` line is an error naming the first line and the fix, since a generic class has no one object and the entry class is the one that runs (spite_compiler#324).
+- D1870: a `--repl-port` build's REPL drops a connection it cannot write to (closes it, forgets it, waits for the next) and never crashes the program (spite_compiler#327).
 
 ## Open
 
