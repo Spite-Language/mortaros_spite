@@ -160,7 +160,7 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
      without refusing anything.
   Which of these, if any, and whether it is an error or a fix (D800)?
 - **Does `Environment` still halt on a malformed setting after D1721?** (raised by D1724). D1721 says the library
-  never halts on what the outside world does, but `spite_spec/specs/programs.md` still has `Environment` crash when
+  never halts on what the outside world does, but the spec page for programs (now retired, D1931) had `Environment` crash when
   a program run directly is given a value that is not of the setting's type (`--workers=many`, a bare `--name` for
   a `String`), since a setting is read in the constructor the compiler fills and the program has no answer to
   test. Options: (a) keep the crash: the person started the program wrong and nothing sensible follows (today's
@@ -191,3 +191,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D1926: reflection constructors take collections and facts, a pass leaves out unread fields; and may an attribute leave out its default when every constructor assigns it first, which is the only way the placeholders `var _owner: Anything = ""` and `Spite.FunctionDeclaration("", "", 0, [], ...)` can go (D50 says no today)
 - **Fixed text into the library, D1927 to D1929 (spite_compiler#332, to confirm).** The prompt's command language (`Spite.Prompt`, `Spite.PromptPath`, `ReadEvaluatePrintLoop`, `Spite.Breakpoint` and the reload commands) stays compiler text until #296 removes it; the build's values reach `Spite.HotReload` as plain values of the generated `Spite.ReloadPoint`; the fault report, settings check, fallback ring and copy table are `common/spite/` (a program loading `common/` alone keeps its fault report), the reloader `common/spite/` with its system calls in `windows/spite/`, still refused by name and on reopening. Recommendation: keep all three.
 - D1930: a fix that rests on a narrowing (a proven check, a decided condition or class test) is dropped when a proof takes that narrowing back, so that compile leaves those lines alone; other failing compiles still write their fixes; a copy fix does not wait; a local of a narrowed attribute is proven like a getter's (spite_compiler#373). Recommendation: keep.
+- D1931: the Markdown specification is deleted; a behaviour is a `tests/` program, a refusal a `conformance/` program, what a person needs is the docs page, what an agent needs is the skill (spite_compiler#24). Recommendation: keep.
