@@ -96,6 +96,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D1878: a check after a write or call that undoes the proof stays and narrows again; a repeat still goes; a class test after such a write stays refused, with `fallback` on the value first as the way out (spite_compiler#329).
 - D1879: a write or call in a block that always leaves does not reach reads after it; a write to the same path is still forgotten past it (spite_compiler#330).
 
+- D2363: a rune becomes text through `to_string()` and nothing converts text into a rune, so a one-character test names a rune (`var slash = Rune(47)`) or compares the rune's text; `Rune(n)` halts outside Unicode or on a surrogate; `write_buffer_at` is safe within one buffer; `remove_all()` never follows a link; `List.sum()` waits on a name, since `sum(measure)` already holds `sum` (spite_standard_library#51 to #53). Recommendation: keep; rename the measured sum to `sum_by(measure)` so `list.sum()` can land, and say whether `Rune(from: String)` should exist so `letter == "/"` reads as before.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
