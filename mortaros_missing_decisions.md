@@ -20,6 +20,8 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 - D2343: every file of a loaded package is read and checked on every build; unreached literal conversions still unchecked (spite_compiler#452).
 - D2344: a loaded package's classes get the run-time stand-in so `Test` runs their tests (spite_compiler#449).
 - D2345: an attribute default that is a chain of calls takes the last call's declared answer type (spite_compiler#469).
+- D2352: a function value read only at run time becomes a `Spite.Function` with an empty name; `call_function()` runs it only when it takes and answers nothing (spite_compiler#464).
+- D2353: an entry class's member named through its namespace from outside is rewritten to the full form with a `fixed:` line; the error naming it in a loaded package, whose files are never rewritten (spite_compiler#475).
 - D1885: a list literal that only names classes or namespaces is known while compiling, and the compiler's folder layout check refuses its build through it, hooked at the top of `SpiteCompiler()` (spite_compiler#299).
 - D1884: a class's `.name` is always its short name, a walk over a written path included, and `.name_with_namespaces` the dotted one (spite_compiler#328).
 - D1869: what a `crash` decided while compiling refuses (spite_compiler#320): only one the function reaches every time it runs, in a function reached from the entry without following a reflection table's fill or a `--repl` prompt; the block after one is not compiled; a walk copy knows a call's constant arguments up to eight calls deep, a known list only while nothing can write to it, and a `fallback` it folds false records no trace.
