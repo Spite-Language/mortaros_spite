@@ -117,6 +117,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2513: a walked attribute handed on to a function gets one copy per class and attribute (`describe_for_Price_cost`), so two classes' `cost` no longer share one copy (spite_compiler#524). Recommendation: keep.
 - D2514: a template's attribute parameter and a handed-on walked attribute are their class's declaration object when used whole, as D2512's walked parameter is; templates over a function member, a shape or a union stay text (spite_compiler#525). Recommendation: keep.
 - D2515: every specialised copy is found by what it was made for (function, class or type, member; a handed-on function declaration or argument by the template copy it came from; an argument template by the function it fills), never by its name; a name already taken gets `_2`, `_3` (spite_compiler#530). Recommendation: keep.
+- D2517: a fault a foreign library raises inside a foreign call and catches itself is left to it; executables carry unwind data so the frame walk reaches a Spite frame, whose handler prints the same report when no library takes the fault (spite_compiler#57, revising D255/D260). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
