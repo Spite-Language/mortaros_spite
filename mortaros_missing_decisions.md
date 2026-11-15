@@ -121,6 +121,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2518: each part of a runtime routine that lowers the stack gets an exact unwind entry (rsp only), the rest are leaves, and a call that never returns is followed by int3, so a fault in the heap functions a routine calls from a resumable function is reported (spite_compiler#515). Recommendation: keep.
 - D2519: the foreign-call site and library live in two thread slots taken at start, so foreign= and the pass-on decision are the faulting thread's own (spite_compiler#516, D184). Recommendation: keep.
 - D2520: a foreign call puts back the site and library it found when it returns, so after a foreign call made from a callback the outer call's site holds again (spite_compiler#519). Recommendation: keep.
+- D2521: a function whose last instruction is a call (one that never returns) ends with int3, so its return address stays inside it and the system's frame walk names it (spite_compiler#520). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
