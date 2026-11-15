@@ -102,6 +102,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2495: a list of at most 8 plain items made only to be handed to a function whose whole body walks it with `each` and a walker of its own class is never made; the call goes to a copy `<function>$walked<items>_<position>` taking the items, showing the callee's place in crash reports (spite_compiler#486). Recommendation: keep.
 - D2496: a function no call reaches counts its attribute reads for the owning class, from the functions the unreached check builds; only code that check skips still counts `x.name` by name (spite_compiler#491).
 - D2497: an attribute without a default is never read before the constructor gives it (an earlier line, a called function of the class, `this` handed out, another default), and a reopening's replacing constructor fills those of every file (spite_compiler#417, #429).
+- D2498: the lost-write rule judges a write to a local whose last whole assignment is a new object from any class's always-new function (a library's answer aside), and a write in a loop to a local made outside it when the loop only writes it (spite_compiler#58). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
