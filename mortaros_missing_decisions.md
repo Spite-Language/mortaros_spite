@@ -14,6 +14,7 @@ D370, 76 by D371, 235 by D372, 161 by D373 and 105 by
 D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by D383, 257 by D382, 258 by D384, 261 by D385, 253 by D386, 255 by D387, 259 by D388, 260 by D389, 262 by D390, 251 by D391, 263 by D394 (2026-10-02); 266 to 296 by D468 to D488, and 268, 269, 271 and 276 to 279 by D493 to D497, 298 by D498, 301 by D499, 291 by D500, 299 by D501 (2026-10-03); 275 by D503, 302 by D504, 304 by D505 (2026-10-04); 280, 281, 284, 297, 300 and 303 by D510, decided by Claude under D509 and listed under To confirm (2026-10-07); the rest of To confirm triaged by D1781 (2026-10-29). Earlier answers are listed in each row of `design/decisions.md`.
 
 ## To confirm
+- D2511: an operation the ranges proof visits twice keeps only what every visit proves (no overflow check, divisor test or fold unless each visit proves it), rather than a crash on a disagreeing visit (spite_compiler#318).
 - D2340: a `[` reads an item only on the line of the value before it; a line starting with `[` is a list literal statement (spite_compiler#459).
 - D2341: naming a namespace of a loaded folder (`Test(Pkg.Tests)`) is a use of its `load` (spite_compiler#450).
 - D2342: an unresolved name starting inside a loaded folder keeps the load; the fix is not deferred to an error-free compile (spite_compiler#451).
