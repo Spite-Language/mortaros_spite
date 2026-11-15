@@ -127,6 +127,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2524: a stop's spite.frame lines walk their callers with the unwind data, as a fault report does (the compiler lowers the library's private _callers to b522's walk over RtlCaptureContext), so a stop in or under a resumable function lists the frames below it; --hot-reload keeps rbp (spite_compiler#529). Recommendation: keep.
 - D2527: a `type`'s own name in its members means the `type` (Mortaro's, #545); Claude's reach: parameters and attribute members read it the same way, replacing the "class that fits" reading of D337/D370/D1136, so a class of your own with `sum(Integer): Integer` now fits `sum(Number): Number`. Recommendation: keep.
 
+- D2536: a `ForeignCallback` made from an object's own function and kept only in its own attributes (read only for `.address`/`.context`, proven from the source) holds its owner back, so the documented owner pattern frees and its `drop()` unregisters; held anywhere else it keeps its owner (D232); a `copy()` of the owner shares it, and a call from C after the original is freed halts (spite_compiler#473). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
