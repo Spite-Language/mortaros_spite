@@ -109,6 +109,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2505: every union member mistake is told at the member's line (a member listed twice at its second line), and the unions of a generic class are checked from the template, minted or not (spite_compiler#510). Recommendation: keep.
 - D2506: a nested tag is added as its own one-item list through `append_children`, like a one-value `{expression}` child, so markup never calls `append_child` (spite_compiler#508; your words, the one list per tag is my reading). Recommendation: keep.
 - D2507: the standard library is refused a wider `bits_and`/`bits_or`/`bits_exclusive_or` operand like a program; D748's exemption is gone and no library call needed changing (spite_compiler#19). Recommendation: keep.
+- D2508: the standard library obeys the local-singleton, copy-to-narrow and terminal `if` rules (D680 withdrawn); `Buffer` counts as a value class for the singleton rule, and `Spite.Fault` and `Spite.Settings`, called by the compiler on no object, keep singletons as locals (spite_compiler#56). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
