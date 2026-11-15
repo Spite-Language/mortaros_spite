@@ -15,6 +15,7 @@ D374 (2026-10-01); 264 by D378 and 250 by D379, 252 by D380, 254 by D381, 256 by
 
 ## To confirm
 - D2511: an operation the ranges proof visits twice keeps only what every visit proves (no overflow check, divisor test or fold unless each visit proves it), rather than a crash on a disagreeing visit (spite_compiler#318).
+- D2516: standard library code no call reaches and no build folded counts no `x.name` read for the program's attributes, so an uncalled library read cannot hide a program's unread attribute (spite_compiler#494). Recommendation: keep.
 - D2340: a `[` reads an item only on the line of the value before it; a line starting with `[` is a list literal statement (spite_compiler#459).
 - D2341: naming a namespace of a loaded folder (`Test(Pkg.Tests)`) is a use of its `load` (spite_compiler#450).
 - D2342: an unresolved name starting inside a loaded folder keeps the load; the fix is not deferred to an error-free compile (spite_compiler#451).
