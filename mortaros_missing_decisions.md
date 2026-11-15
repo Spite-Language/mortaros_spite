@@ -107,6 +107,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2503: a switch over a union covers members by their whole class, and names a missing one by the shortest trailing part of its path that tells it apart (`has no case for Second.Item`) (spite_compiler#505). Recommendation: keep.
 - D2504: the reach of Mortaro's "no type in a union" (spite_compiler#498): `Anything` is refused as a member too while it is the built-in empty `type`, the error sits at the member's line and names the type and the union. Recommendation: keep.
 - D2505: every union member mistake is told at the member's line (a member listed twice at its second line), and the unions of a generic class are checked from the template, minted or not (spite_compiler#510). Recommendation: keep.
+- D2506: a nested tag is added as its own one-item list through `append_children`, like a one-value `{expression}` child, so markup never calls `append_child` (spite_compiler#508; your words, the one list per tag is my reading). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
