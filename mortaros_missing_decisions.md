@@ -99,6 +99,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2492: a rune autocasts to text in `==` only where its `equals` refuses text; `letter.equals("/")` written as a call is still refused (spite_standard_library#53). Recommendation: keep, or say whether the written call should cast too.
 - D2493: `list.sum()` answers `T?`, `null` for an empty list (a class has no zero), and `Dictionary.sum(measure)` is renamed `sum_by` with the list's (spite_standard_library#52). Recommendation: keep.
 - D2494: a crash on a `[ ]` read says `is null` for an element or value that is there and null, `is missing: index, count` or `is missing: key` for one that is not there, and `=false` for a `Boolean?` there and false (spite_compiler#488; the issue had kept "missing" for a null element). Recommendation: keep.
+- D2495: a list of at most 8 plain items made only to be handed to a function whose whole body walks it with `each` and a walker of its own class is never made; the call goes to a copy `<function>$walked<items>_<position>` taking the items, showing the callee's place in crash reports (spite_compiler#486). Recommendation: keep.
 ## Open
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
