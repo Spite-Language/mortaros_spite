@@ -348,3 +348,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D2615: a comparison of function values is one compiler-made function per signature listing every function taken as a value with it; an unlisted entry stops the program (spite_compiler#641). To confirm.
 - D2616: a given `equals` compares a function value attribute with `==` (same function, equal owner), under the cycle guard; an own-function default only called compares by presence (spite_compiler#641). To confirm.
 - D2617: `===` on function values is the same entry and the very same owner (spite_compiler#641, #639). To confirm.
+- D2618: `List.remove(value)` removes the first element equal to `value` and answers nothing, nothing happening when none is; the alternative is answering a `Boolean` for whether one was removed (spite_compiler#641). To confirm.
