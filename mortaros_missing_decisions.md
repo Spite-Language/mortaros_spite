@@ -345,3 +345,6 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D2611: `a !== b` exists as the opposite of `===`, like `!=` beside `==`; alternative: only `not a === b` (spite_compiler#639). Recommendation: keep. To confirm.
 - D2612: `a.is_same_instance(b)` written is refused naming `a === b`, as D396 refuses `a.equals(b)` (spite_compiler#639). Recommendation: keep. To confirm.
 - D2613: `===` edges: a `T?` side needs no narrowing (two missing are the same), `=== null` is the `== null` error, two classes that can never be one object are refused except in a copy per argument type (then `false`), the right side is never cast, and a `type`/`Anything` value is compared without asking which classes reach it (spite_compiler#639). To confirm.
+- D2615: a comparison of function values is one compiler-made function per signature listing every function taken as a value with it; an unlisted entry stops the program (spite_compiler#641). To confirm.
+- D2616: a given `equals` compares a function value attribute with `==` (same function, equal owner), under the cycle guard; an own-function default only called compares by presence (spite_compiler#641). To confirm.
+- D2617: `===` on function values is the same entry and the very same owner (spite_compiler#641, #639). To confirm.
