@@ -388,3 +388,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D2678: a loaded root's folder named like an earlier root reopens it (`mods/game/`, `mods/package/`); a root-level file of a loaded root reopens nothing (spite_compiler#642). To confirm.
 - D2679: the standard library's folders make no root class, so `String` stays `String` in messages and reflection (spite_compiler#642). To confirm.
 - D2681: how `--final-classes` keeps the project's folders: a class at its program file's place, a class from outside under its root's folder, the library at the top (spite_compiler#642). To confirm.
+- D2682: two roots' classes of one name stay apart (no hiding refusal across roots; a bare name is the first root's in load order); the implied root class never stands in for a missing entry file (spite_compiler#642). To confirm.
