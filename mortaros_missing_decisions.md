@@ -394,3 +394,4 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D2679: the standard library's folders make no root class, so `String` stays `String` in messages and reflection (spite_compiler#642). Confirmed by Mortaro 2026-11-20.
 - D2681: how `--final-classes` keeps the project's folders: a class at its program file's place, a class from outside under its root's folder, the library at the top (spite_compiler#642). To confirm.
 - D2682: two roots' classes of one name stay apart (no hiding refusal across roots; a bare name is the first root's in load order); the implied root class never stands in for a missing entry file (spite_compiler#642). To confirm.
+- D2687: `import "folder"` / `require "folder"` alone on a line inside a function are rewritten to `load "folder"` (`fixed:`); elsewhere both quoted forms give the bare form's `there are no imports` error (spite_compiler#654). To confirm.
