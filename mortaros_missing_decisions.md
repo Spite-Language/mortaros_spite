@@ -385,7 +385,7 @@ Settled on 2026-10-29, kept below until removed: a `switch` case naming several 
 - D2674: a union or type repeated in a folder moves to the folder's class and is named plainly inside it (spite_compiler#642). To confirm.
 - D2676: how every root folder became a class (Mortaro's rule): the loaded folder without its own file gets D2670's implied class; library-named root files keep reopening the library (spite_compiler#642). To confirm.
 - D2677: the merged-versions refusal's words, which no longer promise that the program's files settle two pinned commits (spite_compiler#642, #652). To confirm.
-- D2678: a loaded root's folder named like an earlier root reopens it (`mods/game/`, `mods/package/`); a root-level file of a loaded root reopens nothing (spite_compiler#642). To confirm.
-- D2679: the standard library's folders make no root class, so `String` stays `String` in messages and reflection (spite_compiler#642). To confirm.
+- D2678: a loaded root's folder named like an earlier root reopens it (`mods/game/`, `mods/package/`); a root-level file of a loaded root reopens nothing (spite_compiler#642). Confirmed by Mortaro 2026-11-20.
+- D2679: the standard library's folders make no root class, so `String` stays `String` in messages and reflection (spite_compiler#642). Confirmed by Mortaro 2026-11-20.
 - D2681: how `--final-classes` keeps the project's folders: a class at its program file's place, a class from outside under its root's folder, the library at the top (spite_compiler#642). To confirm.
 - D2682: two roots' classes of one name stay apart (no hiding refusal across roots; a bare name is the first root's in load order); the implied root class never stands in for a missing entry file (spite_compiler#642). To confirm.
