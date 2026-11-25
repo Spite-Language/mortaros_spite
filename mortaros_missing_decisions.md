@@ -167,10 +167,17 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2730 (Mortaro's name; form Claude's): `kind.shares_same_generic_template(other: Spite.Class)`, plain library code; the other class is written with its diamond or read from a value, the bare generic name stays refused (spite_compiler#646). To confirm.
 - D2731 (Mortaro's "GitHub URL now"; lookup Claude's): an absolute comment link `https://github.com/Spite-Language/<repository>/blob/master/<path>` is checked where the folder of its page (under a folder of the repository's name) is found beside the file's folder or one above, skipped where none is found; other absolute links are errors (spite_compiler#382). To confirm.
 - D2732: the standard library's comments are kept and judged, absolute links only; its own `docs/` linked through the `spite_standard_library` URL; packages' comments stay unjudged (spite_compiler#382). To confirm.
-- D2733 (batch dw1, spite_compiler#399): a foreign declaration is a function whose whole body is the one foreign call with its own parameters (Spite name = the function, symbol = the member it calls); a call to it is the foreign call at the call site; a foreign call anywhere else is refused with words writing the declaration. Alternative: Mortaro's body-less `func GetCurrentDirectoryW(...)` with a second name, which needs new syntax. To confirm.
-- D2734 (batch dw1): the Spite name rule (snake_case, `W`/`A` dropped, library prefix and leading `get` dropped, abbreviations written out; a person names what the rule cannot). To confirm.
-- D2735 (batch dw1): the standard library's declarations are private `_` functions, a library opened inside a function is opened inside each declaration. To confirm.
-- D2736 (batch dw1): a declared foreign answer must be used like any other; never-read answers are declared as none. To confirm.
+
+- D2733 (batch dw1, spite_compiler#399): every foreign function is declared in its library's `functions`; a call by its C name is refused with words writing the entry. To confirm.
+- D2734 (batch dw1): the Spite name rule for a declaration's key. To confirm.
+- D2735 (batch dw1): the standard library calls C through private `_` functions; value classes open the library locally with the one entry. To confirm.
+- D2736 (batch dw1): a declared foreign answer must be used. To confirm.
+- D2737 (batch dw1, his words): the `DynamicLibrary` namespace mirroring `Spite`; `Argument.get_kind()` since `class` is reflection's. To confirm.
+- D2738 (batch dw1, his words): `DynamicLibrary.Call` filled by name and run; filled values taken when `call()` runs (a `Spite.Call` copies them). To confirm.
+- D2739 (batch dw1): `DynamicLibrary(file, header, functions)`, the dictionary read while compiling and never made; naming rules and answer suffixes go. To confirm.
+- D2740 (batch dw1, his words): declarations by hand, no generation for now. To confirm.
+- D2741 (batch dw1, his words): render's declarations land with this. To confirm.
+- D2742 (batch dw1, his words): rooms as declared types; not built, size and written count open. To confirm.
 
 ## Open
 
