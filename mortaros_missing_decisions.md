@@ -155,6 +155,13 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2713: `.reads`/`.writes` hold every program attribute a function reads or writes, of any class, through every call, known function value, handed function, constructor and `type` filler; own class first, then by class name; no standard library attributes; a function value kept in an attribute or list is not followed (spite_compiler#470). Recommendation: confirm. Open with it: `Spite.AttributeDeclaration` has no owning class (a library addition, D1859).
 - D2714: a changing call on an attribute writes that attribute whichever object holds it (`outfit.items.append(x)` writes `Outfit.items`) (spite_compiler#470). Recommendation: confirm.
 - D2715: the read/write lists are built from what the study finds at each quiet point of the build, each guarded by a fact the proof answers on the finished program (spite_compiler#470). Invisible. Recommendation: confirm.
+- D2716: `Spite.AttributeDeclaration.owner_class` (Mortaro's yes); a bound attribute reaches it as `.declaration.owner_class` (spite_compiler#470). Recommendation: confirm.
+- D2717: the JSX desugar's members start with `jsx_`; `Spite.FunctionDeclaration.source` is `"compiler jsx"` or `"written"` (spite_compiler#471). Recommendation: confirm.
+- D2718: what the desugar adds to a class whose `render()` holds tags: `jsx_replay`, `jsx_root`, `jsx_update`, `jsx_attach`, `jsx_pending`, `jsx_replays_each_frame`, `jsx_release`; sites per tag, per pass in a loop; no keys or keep_alive yet (spite_compiler#471). Recommendation: confirm.
+- D2719: bindings (a tag attribute outside control flow from no render local) get their own function; masks come from those functions' `.reads` and `jsx_flow`'s, learned at the first update (spite_compiler#471). Recommendation: confirm.
+- D2720: generated setters mark a bit; numbers, Booleans and texts only when changed; objects always (no `===`, types unknown at the desugar); written setters mark at their end (spite_compiler#471). Recommendation: confirm.
+- D2721: a `List` attribute is watched through its observer (Mortaro: "List observer") (spite_compiler#471). Recommendation: confirm.
+- D2722: a render reading another object's state replays every frame; #483's observers on the other object cannot be added during the desugar. Options: (a) a pass after building adds them to the fields kept renders read, (b) every attribute gets one and tree shaking drops the rest, (c) keep the fallback. Recommendation: (a) (spite_compiler#471).
 
 ## Open
 
