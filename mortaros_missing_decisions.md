@@ -161,7 +161,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2719: bindings (a tag attribute outside control flow from no render local) get their own function; masks come from those functions' `.reads` and `jsx_flow`'s, learned at the first update (spite_compiler#471). Recommendation: confirm.
 - D2720: generated setters mark a bit; numbers, Booleans and texts only when changed; objects always (no `===`, types unknown at the desugar); written setters mark at their end (spite_compiler#471). Recommendation: confirm.
 - D2721: a `List` attribute is watched through its observer (Mortaro: "List observer") (spite_compiler#471). Recommendation: confirm.
-- D2722: a render reading another object's state replays every frame; #483's observers on the other object cannot be added during the desugar. Options: (a) a pass after building adds them to the fields kept renders read, (b) every attribute gets one and tree shaking drops the rest, (c) keep the fallback. Recommendation: (a) (spite_compiler#471).
+- D2722: a render reading another object's state replays every frame; #483's observers on the other object cannot be added during the desugar. Options: (a) a pass after building adds them to the fields kept renders read, (b) every attribute gets one and tree shaking drops the rest, (c) keep the fallback. The compiler picked (a) (Mortaro: "you decide i review later"), filed as spite_compiler#672; (c) stands until #672 lands (spite_compiler#471). Recommendation: confirm.
 
 ## Open
 
