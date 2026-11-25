@@ -177,7 +177,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2739 (batch dw1): `DynamicLibrary(file, header, functions)`, the dictionary read while compiling and never made; naming rules and answer suffixes go. To confirm.
 - D2740 (batch dw1, his words): declarations by hand, no generation for now. To confirm.
 - D2741 (batch dw1, his words): render's declarations land with this. To confirm.
-- D2742 (batch dw1, his words plus Claude's under D1758): rooms are declared types with a WideText, Text or Bytes field; five `DynamicLibrary.Sizing` cases; the size argument found by its name, then its place; `call()` answers the room or `null`; `Buffer(size)` and `take_written` refused outside the library. The Sizing is on the room argument, `DynamicLibrary.Room(name, class, sizing)` beside `DynamicLibrary.Argument` (Claude's under D1758 on his "you decide"). To confirm.
+- D2742 (batch dw1, his words plus Claude's under D1758): rooms are declared types with a WideText, Text or Bytes field; five `DynamicLibrary.Sizing` cases; the size argument declared as `DynamicLibrary.RoomSize(name, class)`, never guessed; `call()` answers the room or `null`; `Buffer(size)` and `take_written` refused outside the library. The Sizing is on the room argument, `DynamicLibrary.Room(name, class, sizing)` beside `DynamicLibrary.Argument` (Claude's under D1758 on his "you decide"). To confirm.
 
 ## Open
 
