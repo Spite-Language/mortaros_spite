@@ -165,7 +165,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2728 (Mortaro's "Exact match"; the own-name reach Claude's): a class's function fits a `type`'s function member only with exactly its parameter types; a parameter typed by the `type`'s own name is met by the `type` or the class itself, replacing D2527's reach for parameters (spite_compiler#415). To confirm.
 - D2729: a `type` given to a constrained `generic` is checked like a class, member by member, with the class's words (spite_compiler#415). To confirm.
 - D2730 (Mortaro's name; form Claude's): `kind.shares_same_generic_template(other: Spite.Class)`, plain library code; the other class is written with its diamond or read from a value, the bare generic name stays refused (spite_compiler#646). To confirm.
-- D2731 (Mortaro's "GitHub URL now"; lookup Claude's): an absolute comment link `https://github.com/Spite-Language/<repository>/blob/master/<path>` is checked in the nearest folder of the repository's name beside the file's folder or one above, skipped where none is found; other absolute links are errors (spite_compiler#382). To confirm.
+- D2731 (Mortaro's "GitHub URL now"; lookup Claude's): an absolute comment link `https://github.com/Spite-Language/<repository>/blob/master/<path>` is checked where the folder of its page (under a folder of the repository's name) is found beside the file's folder or one above, skipped where none is found; other absolute links are errors (spite_compiler#382). To confirm.
 - D2732: the standard library's comments are kept and judged, absolute links only; its own `docs/` linked through the `spite_standard_library` URL; packages' comments stay unjudged (spite_compiler#382). To confirm.
 
 ## Open
