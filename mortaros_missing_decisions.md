@@ -173,7 +173,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2735 (batch dw1): the standard library calls C through private `_` functions; value classes open the library locally with the one entry. To confirm.
 - D2736 (batch dw1): a declared foreign answer must be used. To confirm.
 - D2737 (batch dw1, his words): the `DynamicLibrary` namespace mirroring `Spite`; `Argument.get_kind()` since `class` is reflection's. To confirm.
-- D2738 (batch dw1, his words): `DynamicLibrary.Call` filled by name and run; filled values taken when `call()` runs (a `Spite.Call` copies them). To confirm.
+- D2738 (batch dw1, his words): `DynamicLibrary.Call` filled by name and run, each value taken when filled exactly like `Spite.Call`; a fill nothing changes before `call()` is passed itself, for both. To confirm.
 - D2739 (batch dw1): `DynamicLibrary(file, header, functions)`, the dictionary read while compiling and never made; naming rules and answer suffixes go. To confirm.
 - D2740 (batch dw1, his words): declarations by hand, no generation for now. To confirm.
 - D2741 (batch dw1, his words): render's declarations land with this. To confirm.
