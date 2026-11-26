@@ -178,6 +178,7 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2740 (batch dw1, his words): declarations by hand, no generation for now. To confirm.
 - D2741 (batch dw1, his words): render's declarations land with this. To confirm.
 - D2742 (batch dw1, his words plus Claude's under D1758): rooms are declared types with a WideText, Text or Bytes field; five `DynamicLibrary.Sizing` cases; the size argument declared as `DynamicLibrary.RoomSize(name, class)`, never guessed; `call()` answers the room or `null`; `Buffer(size)` and `take_written` refused outside the library. The Sizing is on the room argument, `DynamicLibrary.Room(name, class, sizing)` beside `DynamicLibrary.Argument` (Claude's under D1758 on his "you decide"). To confirm.
+- D2751 to D2754 (batch as1, spite_compiler#675): a tag on its own line in a constructor that takes no arguments attaches with `child.parent = owner` and `owner.children.append(child)`, leaves up, and is refused elsewhere; an `if `/`while `/`switch `/`var ` line among an assembled tag's children is a statement (such text goes in an attribute); a `{list}` child the file shows is a `List` is attached entry by entry; a setter, the compiler's own included, is a function value. To confirm.
 
 ## Open
 
