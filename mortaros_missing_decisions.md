@@ -179,8 +179,12 @@ as the compiler's own under D509 and D1758. What is left changes what a program 
 - D2740 (batch dw1, his words): declarations by hand, no generation for now. To confirm.
 - D2741 (batch dw1, his words): render's declarations land with this. To confirm.
 - D2742 (batch dw1, his words plus Claude's under D1758): rooms are declared types with a WideText, Text or Bytes field; five `DynamicLibrary.Sizing` cases; the size argument declared as `DynamicLibrary.RoomSize(name, class)`, never guessed; `call()` answers the room or `null`; `Buffer(size)` and `take_written` refused outside the library. The Sizing is on the room argument, `DynamicLibrary.Room(name, class, sizing)` beside `DynamicLibrary.Argument` (Claude's under D1758 on his "you decide"). To confirm.
+- D2751 to D2754 (batch as1, spite_compiler#675): a tag on its own line in a constructor that takes no arguments attaches with `child.parent = owner` and `owner.children.append(child)`, leaves up, and is refused elsewhere; an `if `/`while `/`switch `/`var ` line among an assembled tag's children is a statement (such text goes in an attribute); a `{list}` child the file shows is a `List` is attached entry by entry; a setter, the compiler's own included, is a function value. To confirm.
 
 ## Open
+
+- **`map` with a named function (spite_compiler#675, render prototype wish 7; batch as1).** `{items.map(render_inventory_slot)}` needs `List.map(function)`, which the standard library does not have (only `map_members`), so it is a library addition (D1859) and was not added. Options: (a) `func map(function: Spite.Function<$element_type, $answer_type>): List<$answer_type>` on `List`, the answer's class taken from the function value's declared answer; (b) keep `each` into a list the caller makes. Recommendation: (a), it is what `each` already is plus an answer; it blocks the `{list}` child of a call (D2753 attaches only a list the file shows).
+- D2755 (main session under D1758, Mortaro away, 2026-11-26): a live piece hears another object's write through a hidden per-object watcher list given only to watched classes, walked by the compiler's setters (spite_compiler#675 box 2). To confirm.
 
 Settled on 2026-10-29, kept below until removed: a `switch` case naming several values (D1762, D1770), the test runner (D1768), a `Table` (D1766), a generic constrained by a union (D1759), `assert` (D1765, keyword still open in spite_compiler#258), D578 (D1763, D1764), D809 (postponed by D1764 until constants are shaped), `Environment` on a malformed setting (D1760).
 
